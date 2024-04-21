@@ -20,24 +20,34 @@ prompt = "an image of a couple on a bridge, noisy, colored, photorealistic, nois
 """
 
 # image foggy
-url = "https://www.ignatianspirituality.com/wp-content/uploads/2015/06/man-in-fog2.jpg"
+# url = "https://www.ignatianspirituality.com/wp-content/uploads/2015/06/man-in-fog2.jpg"
+# init_image = load_image(url)
+#
+#
+# prompt = "a person in fog, fog on the foreground, photorealistic, 8k"
+# prompt_alt = "an image of a foggy forest, fog on the foreground, photorealistic, 8k"
+# negative_prompt = "bad anatomy, disfigured, ugly, deformed, poor details, disfigured face"
+
+# image darkened
+
+url = "/Users/berke/Desktop/noisy-image-generation/noisy-image-generation/img2img_samples/EyFl00cWQAIK8VN.jpg"
 init_image = load_image(url)
 
 
-prompt = "a person in fog, fog on the foreground, photorealistic, 8k"
+prompt = "an image of a forest shot in the dark, night time, low light, loss of detail, photorealistic, 8k"
 prompt_alt = "an image of a foggy forest, fog on the foreground, photorealistic, 8k"
 negative_prompt = "bad anatomy, disfigured, ugly, deformed, poor details, disfigured face"
 
 i = 0
 
-while i < 1:
+while i < 15:
 
     randSeed = random.randint(1, 1000)
 
     generator = torch.Generator(device="mps").manual_seed(randSeed)
 
     # pass prompt and image to pipeline
-    image = pipeline(prompt=prompt_alt, negative_prompt=negative_prompt, generator=generator, image=init_image).images[0]
-    image.save("img2img/img2img%s.png" % randSeed)
+    image = pipeline(prompt=prompt, negative_prompt=negative_prompt, generator=generator, image=init_image).images[0]
+    image.save("img2img/darkened_forest/dforest%s.png" % randSeed)
 
     i += 1
