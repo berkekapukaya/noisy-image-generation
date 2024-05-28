@@ -26,7 +26,7 @@ while i < 1:
     #     generator=generator, num_inference_steps=30,
     # ).images[0]
     #
-    # image.save("text2img/blurry/30-steps/stained_glass%s.png" % randSeed)
+    # image.save("../text2img/blurry/30-steps/stained_glass%s.png" % randSeed)
 
 
     ##50 inference blurry uncomment the preferred one
@@ -37,7 +37,7 @@ while i < 1:
         generator=generator,
     ).images[0]
 
-    image.save("text2img/blurry/50-steps/stained_glass%s.png" % randSeed)
+    image.save("../text2img/blurry/50-steps/stained_glass%s.png" % randSeed)
     """
 
  ##30 inference steps foggy
@@ -48,7 +48,7 @@ while i < 1:
         generator=generator, num_inference_steps=30,
     ).images[0]
 
-    image.save("text2img/foggy/30-steps/stained_glass%s.png" % randSeed)"""
+    image.save("../text2img/foggy/30-steps/stained_glass%s.png" % randSeed)"""
 
     """
     ##50 inference foggy uncomment the preferred one
@@ -58,7 +58,7 @@ while i < 1:
         generator=generator,
     ).images[0]
 
-    image.save("text2img/foggy/50-steps/stained_glass%s.png" % randSeed)
+    image.save("../text2img/foggy/50-steps/stained_glass%s.png" % randSeed)
     """
 
     ## 30 inference steps darkened
@@ -69,7 +69,7 @@ while i < 1:
     #     generator=generator, num_inference_steps=30,
     # ).images[0]
     #
-    # image.save("text2img/darkened/30-steps/darkened_alley%s.png" % randSeed)
+    # image.save("../text2img/darkened/30-steps/darkened_alley%s.png" % randSeed)
 
     ## 50 inference steps darkened
 
@@ -79,7 +79,7 @@ while i < 1:
         generator=generator, num_inference_steps=50,
     ).images[0]
 
-    image.save("text2img/darkened/50-steps/darkened_alley%s.png" % randSeed)
+    image.save("../text2img/darkened/50-steps/darkened_alley%s.png" % randSeed)
 
     i += 1
 

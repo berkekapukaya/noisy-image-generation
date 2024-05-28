@@ -30,7 +30,7 @@ prompt = "an image of a couple on a bridge, noisy, colored, photorealistic, nois
 
 # image darkened
 
-url = "/Users/berke/Desktop/noisy-image-generation/noisy-image-generation/img2img_samples/EyFl00cWQAIK8VN.jpg"
+url = "../img2img_samples/dark_forest.jpg"
 init_image = load_image(url)
 
 
@@ -40,7 +40,7 @@ negative_prompt = "bad anatomy, disfigured, ugly, deformed, poor details, disfig
 
 i = 0
 
-while i < 15:
+while i < 1:
 
     randSeed = random.randint(1, 1000)
 
@@ -48,6 +48,6 @@ while i < 15:
 
     # pass prompt and image to pipeline
     image = pipeline(prompt=prompt, negative_prompt=negative_prompt, generator=generator, image=init_image).images[0]
-    image.save("img2img/darkened_forest/dforest%s.png" % randSeed)
+    image.save("../img2img/darkened_forest/dforest%s.png" % randSeed)
 
     i += 1
