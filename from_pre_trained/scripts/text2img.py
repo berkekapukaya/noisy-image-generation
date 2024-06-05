@@ -74,7 +74,8 @@ while i < 1:
     ## 50 inference steps darkened
 
     image = pipeline(
-        prompt="image of an alley during the night, no lighting, loss of light, low brightness, loss in detail",
+        prompt="image of a cafe during the night, no lighting, loss of light,"
+               " low brightness, loss in detail, low exposure",
         negative_prompt="ugly, deformed, disfigured, bad anatomy, sharp, high quality, high detail",
         generator=generator, num_inference_steps=50,
     ).images[0]
